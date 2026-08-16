@@ -1,0 +1,91 @@
+[
+    {
+        "id": 1,
+        "title": "First Date",
+        "description": "We met at that cozy cafe in Westwood.",
+        "location": "Westwood, CA",
+        "theme": "Coffee & Chemistry",
+        "date": "2025-09-12",
+        "image_path": "/images/milestone_1.jpg"
+    }
+    ,
+    {
+        "id": 2,
+        "title": "Second Date",
+        "description": "We went to the beach for a romantic sunset.",
+        "location": "Malibu, CA",
+        "theme": "Sunset & Sand",
+        "date": "2025-09-19",
+        "image_path": "/images/milestone_2.jpg"
+    }
+    ,
+    {
+        "id": 3,
+        "title": "Third Date",
+        "description": "We went to the park for a picnic.",
+        "location": "Los Angeles, CA",
+        "theme": "Picnic & Fun",
+        "date": "2025-09-26",
+        "image_path": "/images/milestone_3.jpg"
+    }
+    ,
+    {
+        "id": 4,
+        "title": "Fourth Date",
+        "description": "We went to the museum for a cultural experience.",
+        "location": "Los Angeles, CA",
+        "theme": "Museum & Culture",
+        "date": "2025-10-03",
+        "image_path": "/images/milestone_4.jpg"
+    }
+    ,
+    {
+        "id": 5,
+        "title": "Fifth Date",
+        "description": "We went to the park for a picnic.",
+        "location": "Los Angeles, CA",
+        "theme": "Picnic & Fun",
+        "date": "2025-10-10",
+        "image_path": "/images/milestone_5.jpg"
+    }
+    ,
+    {
+        "id": 6,
+        "title": "Sixth Date",
+        "description": "We went to the museum for a cultural experience.",
+        "location": "Los Angeles, CA",
+        "theme": "Museum & Culture",
+        "date": "2025-10-17",
+        "image_path": "/images/milestone_6.jpg"
+    }
+    ,
+    {
+        "id": 7,
+        "title": "Seventh Date",
+        "description": "We went to the park for a picnic.",
+        "location": "Los Angeles, CA",
+        "theme": "Picnic & Fun",
+        "date": "2025-10-24",
+        "image_path": "/images/milestone_7.jpg"
+    }
+    ,
+    {
+        "id": 8,
+        "title": "Eighth Date",
+        "description": "We went to the museum for a cultural experience.",
+        "location": "Los Angeles, CA",
+        "theme": "Museum & Culture",
+        "date": "2025-10-31",
+        "image_path": "/images/milestone_8.jpg"
+    }
+    ,
+    {
+        "id": 9,
+        "title": "Ninth Date",
+        "description": "We went to the museum for a cultural experience.",
+        "location": "Los Angeles, CA",
+        "theme": "Museum & Culture",
+        "date": "2025-11-07",
+        "image_path": "/images/milestone_9.jpg"
+    }
+]
