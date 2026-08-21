@@ -1,3 +1,6 @@
 data/*.csv
+data/chroma_db/
 *.env
-data/*.csv
+.DS_Store
+__pycache__/
+*.pyc
