@@ -1,16 +1,28 @@
 import os
 import re
-from dotenv import load_dotenv
+import sys
 from datetime import datetime
+from pathlib import Path
+
+from dotenv import load_dotenv
 from rank_bm25 import BM25Okapi
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain.prompts import ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+
+BACKEND_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = BACKEND_DIR.parent
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
+
 from chunk_conversations import group_into_sessions
 
-load_dotenv()
-CHROMA_PATH = "data/chroma_db"
+load_dotenv(PROJECT_ROOT / ".env", override=True)
+load_dotenv(BACKEND_DIR / ".env", override=True)
+
+CHROMA_PATH = str(PROJECT_ROOT / "data" / "chroma_db")
+CSV_PATH = str(PROJECT_ROOT / "data" / "cleaned_chat_history.csv")
 
 class HybridChatRetriever:
     def __init__(self):
@@ -23,7 +35,7 @@ class HybridChatRetriever:
         )
         
         # 2. Build in-memory BM25 Keyword Search index
-        self.raw_docs = group_into_sessions()
+        self.raw_docs = group_into_sessions(csv_path=CSV_PATH)
         self.corpus = [doc['page_content'] for doc in self.raw_docs]
         tokenized_corpus = [doc.lower().split() for doc in self.corpus]
         self.bm25 = BM25Okapi(tokenized_corpus)
@@ -69,6 +81,8 @@ class HybridChatRetriever:
 
             # Sort chronologically using the true datetime objects
             sorted_contents.sort(key=parse_date)
+
+        return sorted_contents
 
 def start_hybrid_agent():
     retriever = HybridChatRetriever()

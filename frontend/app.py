@@ -11,7 +11,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("💬 iMessage Memory Assistant")
+st.title("💬 iMessage Memories")
 st.caption("Ask anything about your past conversations, memories, places, or events.")
 
 try:

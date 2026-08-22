@@ -19,6 +19,6 @@
     },
     "types": ["node"]
   },
-  "include": ["next-env.d.ts", "app/**/*", "components/**/*", "data/**/*", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "global.d.ts", "app/**/*", "components/**/*", "data/**/*", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
