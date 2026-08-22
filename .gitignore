@@ -4,3 +4,6 @@ data/chroma_db/
 .DS_Store
 __pycache__/
 *.pyc
+node_modules/
+.next/
+out/
